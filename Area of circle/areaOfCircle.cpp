@@ -13,7 +13,7 @@ int main()
     cout << "Enter the radius of the circle: ";
     cin >> radius;
 
-    double area = PI * (radius * radius);
+    double area = PI * (int) (radius * radius); // type casting of the product
     cout << "The area of a circle of radius " << radius << " is " << area;
 
     return 0; 

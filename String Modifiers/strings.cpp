@@ -16,8 +16,10 @@ int main() {
     cout << "Enter your lastName: ";
     cin >> lastName;
 
-    string fullName;
-    fullName = firstName + lastName;
+    cout << endl << firstName.append(lastName);
+    string greeting = "Hello";
+    greeting.erase(3, 1);
 
-    cout << "Your full Name is: " + fullName;
+    cout << greeting;
+    
 }

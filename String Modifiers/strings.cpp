@@ -17,9 +17,12 @@ int main() {
     cin >> lastName;
 
     cout << endl << firstName.append(lastName);
+    cout << endl ;
     string greeting = "Hello";
-    greeting.erase(3, 1);
+    greeting.pop_back();
+    greeting.erase(1);
+    
 
     cout << greeting;
-    
+
 }

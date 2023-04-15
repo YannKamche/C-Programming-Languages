@@ -14,5 +14,7 @@ int main() {
     int myOct = 020;
     cout << myOct << endl;
 
+    cout << hex << 13 << endl;
+    cout << oct << 10;
 
 }

@@ -6,23 +6,20 @@ using std::cin;
 using std::endl;
 using std::string;
 
+/*
+- getline(), append(), insert(), pop_back(), replace(), find(), substr(), find_first_of(),
+compare()
+*/
 int main() {
     string firstName;
     string lastName;
 
-    cout << "Enter your firstName: ";
-    cin >> firstName;
-
-    cout << "Enter your lastName: ";
-    cin >> lastName;
-
-    cout << endl << firstName.append(lastName);
-    cout << endl ;
-    string greeting = "Hello";
+    string greeting = "Hello!! How are you doing today?";
     greeting.pop_back();
-    greeting.erase(1);
-    
 
-    cout << greeting;
+    cout << greeting.find("Hello");
+    cout << greeting.substr("How");
+
+
 
 }

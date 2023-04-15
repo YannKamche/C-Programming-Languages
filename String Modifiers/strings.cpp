@@ -17,8 +17,12 @@ int main() {
     string greeting = "Hello!! How are you doing today?";
     greeting.pop_back();
 
-    cout << greeting.find("Hello");
-    cout << greeting.substr("How");
+    cout << greeting.find("today") << endl;
+    cout << greeting.substr(8, 3) << endl;
+    cout << greeting.find_first_of("i") << endl;
+
+    firstName = "yann is the best";
+    if (firstName.compare("yann is the best") == 0) cout << "Equal";
 
 
 

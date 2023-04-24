@@ -19,6 +19,7 @@ void menu();
 void guessingGame();
 int userGuess();
 void checkGuess(int, int);
+int rangeUser();
 
 
 //Functions associated to the snake Game
@@ -84,11 +85,19 @@ void menu()
 
 void guessingGame()
 {
-    int random = rand() % 1001;
+    int maxValue = rangeUser();
+    int random = rand() % maxValue + 1;
     cout << random << endl;
     checkGuess(random, userGuess());
 }
 
+int rangeUser() 
+{
+    cout << "Enter the range: ";
+    int range;
+    cin >> range;
+    return range;
+}
 int userGuess()
 {
     cout << "Guess a number: ";
@@ -98,7 +107,7 @@ int userGuess()
 }
 void checkGuess(int random, int guess)
 {   
-    while(true)
+    for(int i = 3; i > 0; i--)
     { 
         if(guess == random){
             cout << "You win!!" << endl;
@@ -106,12 +115,11 @@ void checkGuess(int random, int guess)
         }
         else if (guess < random){
             cout << "Too Low!!!" << endl;
-            break;
         }
         else {
             cout << "Too High!!" << endl;
-            break;
         }
+        cout << "You are left with " << i << " attempts";
     }
 
 }

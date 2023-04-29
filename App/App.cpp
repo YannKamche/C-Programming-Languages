@@ -107,7 +107,7 @@ int userGuess()
 }
 void checkGuess(int random, int guess)
 {   
-    for(int i = 3; i > 0; i--)
+    while(true)
     { 
         if(guess == random){
             cout << "You win!!" << endl;
@@ -119,7 +119,6 @@ void checkGuess(int random, int guess)
         else {
             cout << "Too High!!" << endl;
         }
-        cout << "You are left with " << i << " attempts";
+        checkGuess(random, userGuess());
     }
-
 }
